@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10261f">
+  <meta name="description" content="KGF Bricks Suppliers — lightweight red-colour bricks with lorry delivery to confirmed construction sites across our service areas.">
+  <title>KGF Bricks Suppliers | Brick Supply, Delivered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+</head>
+<body>
+  <div class="announcement"><span class="live-dot"></span> Local supply. Direct contact. Delivery by enquiry.</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="KGF Bricks Suppliers home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>KGF <b>BRICKS</b><small>SUPPLIERS</small></span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav"><a href="#about">About</a><a href="#bricks">Our bricks</a><a href="#delivery">Delivery areas</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav>
+    <a class="header-call" href="tel:+919603804243"><span class="phone-icon">↗</span><span><small>Talk to our team</small><strong>96038 04243</strong></span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> BRICK SUPPLY · LORRY DELIVERY</div>
+        <h1>Good work<br>starts with<br><em>solid ground.</em></h1>
+        <p>Lightweight red-colour bricks, supplied with lorry delivery to construction sites across our service areas.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#order">Enquire about bricks <span>↗</span></a><a class="button button-ghost" href="tel:+919603804243"><span class="call-symbol">⌕</span> Call our team</a></div>
+        <div class="hero-proof"><div class="avatar-stack"><span>K</span><span>G</span><span>F</span></div><span><b>Local supplier</b><small>Speak directly with our team</small></span><span class="proof-divider"></span><span class="since"><b>KGF</b><small>BRICKS SUPPLIERS</small></span></div>
+      </div>
+      <div class="hero-art">
+        <img src="{{ url_for('static', filename='assets/kgf-delivery-yard.webp') }}" alt="Lorry loaded with red bricks at a local brick yard" fetchpriority="high">
+        <div class="art-label"><span class="label-icon">↗</span><span><b>From the yard to your site</b><small>Delivery details confirmed per enquiry</small></span></div>
+        <div class="image-index"><b>01</b><span></span> SUPPLY, MADE SIMPLE</div>
+        <div class="hero-image-caption">A BETTER START FOR YOUR NEXT BUILD</div>
+      </div>
+      <div class="hero-bottom"><span>BUILT FOR YOUR NEXT STEP</span><span class="scroll-cue">SCROLL TO EXPLORE <b>↓</b></span><span>YADADRI · TELANGANA</span></div>
+    </section>
+
+    <section class="intro section-wrap" id="about">
+      <div class="section-kicker">01 / WHO WE ARE</div><div class="intro-content"><h2>A local brick supplier<br>you can <em>reach directly.</em></h2><div class="intro-note"><p>KGF Bricks Suppliers helps builders and homeowners source lightweight red-colour bricks, with lorry delivery to sites where access and availability are confirmed.</p><a class="text-link" href="#contact">Get in touch <span>↗</span></a></div></div>
+      <div class="service-strip"><div><span class="strip-icon">▦</span><span><b>Brick supply</b><small>Lightweight red-colour bricks</small></span></div><div><span class="strip-icon">↗</span><span><b>Lorry delivery</b><small>Site access checked with you</small></span></div><div><span class="strip-icon">⌕</span><span><b>Direct enquiry</b><small>Talk through your requirements</small></span></div></div>
+    </section>
+
+    <section class="product section-wrap" id="bricks"><div class="section-kicker">02 / OUR BRICKS</div><div class="product-layout"><div class="brick-photo"><img src="{{ url_for('static', filename='assets/red-bricks-yard.webp') }}" alt="Close-up of naturally textured red bricks stacked on a pallet" loading="lazy"><div class="photo-caption">RED BRICKS · YARD STOCK</div></div><div class="product-copy"><div class="eyebrow"><span></span> THE PRODUCT</div><h2>Lightweight<br>Red Colour Bricks</h2><p>Tell us what your project needs. We’ll discuss current availability, quantity, specifications and delivery charges with you directly.</p><ul class="plain-list"><li><span>01</span> Ask about current price and stock</li><li><span>02</span> Share the size or specification you need</li><li><span>03</span> Confirm delivery access and charges</li></ul><a class="button button-dark" href="#order">Ask about availability <span>↗</span></a><p class="fine-note">Prices, dimensions and technical properties are confirmed by the supplier per enquiry.</p></div></div></section>
+
+    <section class="delivery" id="delivery"><div class="delivery-inner"><div class="section-kicker light-kicker">03 / DELIVERY AREAS</div><div class="delivery-layout"><div><h2>From our yard<br>to <em>your site.</em></h2><p>Tell us your village or town, site address and a nearby landmark. We’ll check coverage, lorry access and delivery charges with you.</p><a class="button button-gold" href="#order">Check my location <span>↗</span></a></div><div class="areas-panel"><div class="area-head"><span>AREAS WE SERVE</span><span>01 — 06</span></div><div class="area-grid">{% for area in areas[:6] %}<div class="area-item"><span class="area-pin">⌖</span>{{ area }}<span class="area-arrow">↗</span></div>{% endfor %}<div class="area-item area-other"><span class="area-pin">＋</span>Nearby surroundings<span class="area-arrow">↗</span></div></div><div class="coverage-note"><span>i</span> Coverage, vehicle access and charges are confirmed for each site.</div></div></div></div></section>
+
+    <section class="order-section section-wrap" id="order"><div class="section-kicker">04 / START AN ENQUIRY</div><div class="order-layout"><div class="order-intro"><div class="eyebrow"><span></span> YOUR PROJECT, YOUR WAY</div><h2>Let’s get the<br><em>details right.</em></h2><p>Share a few details and we’ll prepare a message for WhatsApp. You can review and send it to our team.</p><div class="order-steps"><div><span>1</span><p><b>Tell us what you need</b><small>Area, quantity and site details</small></p></div><div><span>2</span><p><b>Review your message</b><small>We’ll open WhatsApp for you</small></p></div><div><span>3</span><p><b>Confirm together</b><small>Price, availability and delivery</small></p></div></div><div class="direct-contact"><span>Prefer to talk?</span><a href="tel:+919603804243">96038 04243 <b>↗</b></a><a href="tel:+919010734391">90107 34391 <b>↗</b></a></div></div>
+      <form class="order-form" id="order-form"><div class="form-heading"><span>ORDER ENQUIRY</span><span class="required-note">* Required fields</span></div><div class="form-grid"><label>Your name *<input name="name" autocomplete="name" required maxlength="100" placeholder="e.g. Ravi Kumar"></label><label>Phone number *<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" placeholder="Your contact number"></label><label>Delivery area *<select name="area" required><option value="" disabled selected>Select an area</option>{% for area in areas %}<option>{{ area }}</option>{% endfor %}</select></label><label>Quantity required *<input name="quantity" required maxlength="80" placeholder="e.g. 2,000 bricks"></label><label class="full-field">Full delivery address & landmark *<textarea name="address" required maxlength="500" rows="3" placeholder="Village / town, site address and a nearby landmark"></textarea></label><label>Preferred delivery date<input name="preferred_date" type="date"></label><label>Other requirements<input name="notes" maxlength="1000" placeholder="Optional details"></label></div><label class="consent"><input type="checkbox" required><span>I agree to share these details with KGF Bricks Suppliers to respond to this enquiry. <a href="#privacy">Privacy note</a></span></label><p class="form-status" aria-live="polite"></p><button class="button button-dark form-submit" type="submit">Send enquiry on WhatsApp <span>↗</span></button><div class="form-disclaimer"><span>ⓘ</span><p>Sending an enquiry does not confirm an order. Price, stock, transport charges, site access and timing need supplier confirmation.</p></div></form>
+    </div></section>
+
+    <section class="faq-section" id="faq"><div class="section-wrap faq-layout"><div><div class="section-kicker">05 / GOOD TO KNOW</div><h2>Questions, <em>answered.</em></h2><p>We’ll help you confirm the details before you decide.</p></div><div class="faq-list"><details><summary>How can I know the current price?<span>+</span></summary><p>Send us the quantity you need and your delivery location. Our team will confirm the current price and any delivery charges.</p></details><details><summary>Do you deliver to my area?<span>+</span></summary><p>We serve the areas listed above and nearby surroundings. We’ll check your exact location and lorry access before confirming.</p></details><details><summary>Is my order confirmed when I submit this form?<span>+</span></summary><p>No. This form sends an enquiry. Your order is confirmed only after you and the supplier agree on price, quantity, availability, transport charges and timing.</p></details></div></div></section>
+  </main>
+
+  <footer id="contact"><div class="footer-main section-wrap"><div class="footer-brand"><a class="brand brand-light" href="#home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>KGF <b>BRICKS</b><small>SUPPLIERS</small></span></a><p>Lightweight red-colour bricks.<br>Lorry delivery by enquiry.</p><a class="button button-gold footer-cta" href="#order">Start an enquiry <span>↗</span></a></div><div class="footer-col"><span class="footer-label">GET IN TOUCH</span><a class="footer-phone" href="tel:+919603804243">96038 04243 <span>↗</span></a><a class="footer-phone" href="tel:+919010734391">90107 34391 <span>↗</span></a><a class="whatsapp-link" href="https://wa.me/919603804243" target="_blank" rel="noopener noreferrer">WhatsApp our team ↗</a></div><div class="footer-col"><span class="footer-label">SERVICE AREAS</span><p>Yadadri Bhuvanagiri<br>Alair · Gajwel · Medchal<br>Chakripur · Tarnaka<br>Nearby surroundings</p></div><div class="footer-col"><span class="footer-label">EXPLORE</span><a href="#about">About us</a><a href="#bricks">Our bricks</a><a href="#delivery">Delivery areas</a><a href="#faq">FAQs</a></div></div><div class="footer-bottom section-wrap"><span>© <span id="year"></span> KGF Bricks Suppliers</span><span id="privacy">Your details are used to respond to this enquiry. They are stored only on this website server and are not sold.</span><a href="#home">BACK TO TOP ↑</a></div></footer>
+  <a class="floating-wa" href="https://wa.me/919603804243" target="_blank" rel="noopener noreferrer" aria-label="Chat with KGF Bricks Suppliers on WhatsApp"><span>◉</span><b>WhatsApp</b></a>
+  <script src="{{ url_for('static', filename='js/site.js') }}" defer></script>
+</body></html>
